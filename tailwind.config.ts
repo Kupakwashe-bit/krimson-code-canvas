@@ -52,6 +52,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				krimson: {
+					navy: '#0B0B1E',
+					turquoise: '#1EDBBB',
+					light: '#E0FFFA',
+					dark: '#061621',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
