@@ -1,4 +1,3 @@
-
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -10,21 +9,32 @@ export function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setFormStatus("submitting");
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setFormStatus("success");
-      
-      // Reset form after success
-      const form = e.target as HTMLFormElement;
-      form.reset();
-      
-      // Reset status after delay
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
+    const subject = formData.get('subject') as string;
+    const message = formData.get('message') as string;
+
+    if (name && email && subject && message) {
+      setFormStatus("submitting");
+
+      // Simulate sending email
       setTimeout(() => {
-        setFormStatus("idle");
-      }, 3000);
-    }, 1500);
+        window.location.href = `mailto:nyangurukupakwashe@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
+        setFormStatus("success");
+
+        // Reset form after success
+        form.reset();
+
+        // Reset status after delay
+        setTimeout(() => {
+          setFormStatus("idle");
+        }, 3000);
+      }, 1500);
+    } else {
+      setFormStatus("error");
+    }
   };
 
   return (
@@ -32,7 +42,7 @@ export function ContactSection() {
       <div className="krimson-container">
         <div className="text-center mb-16">
           <h2 className="krimson-subheading mb-3">GET IN TOUCH</h2>
-          <h3 className="krimson-heading mb-6">Contact Us</h3>
+          <h3 className="krimson-heading mb-6">Contact Me</h3>
           <p className="max-w-3xl mx-auto text-muted-foreground text-lg">
             Have a project in mind or want to learn more about our services? We'd love to hear from you.
           </p>
@@ -123,7 +133,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-muted-foreground">info@krimsontech.com</p>
+                    <p className="text-muted-foreground">nyangurukupakwashe@gmail.com</p>
                   </div>
                 </div>
                 
@@ -133,7 +143,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="font-medium">Phone</p>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="text-muted-foreground">0781 856 876</p>
                   </div>
                 </div>
                 
@@ -144,8 +154,7 @@ export function ContactSection() {
                   <div>
                     <p className="font-medium">Office</p>
                     <p className="text-muted-foreground">
-                      123 Tech Avenue, Suite 200<br />
-                      San Francisco, CA 94107
+                      Chitungwiza Zengeza 3
                     </p>
                   </div>
                 </div>

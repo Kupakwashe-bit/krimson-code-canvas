@@ -1,4 +1,3 @@
-
 import { CheckCircle, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -23,7 +22,7 @@ export function AboutSection() {
       <div className="krimson-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="krimson-subheading mb-3">ABOUT US</h2>
+            <h2 className="krimson-subheading mb-3">ABOUT ME</h2>
             <h3 className="krimson-heading mb-6">EMPOWERING FUTURE TECH</h3>
             <p className="text-muted-foreground mb-6">
               KRIMSON TECHNOLOGIES is a forward-thinking digital agency specializing in creating innovative solutions that help businesses thrive in today's technology-driven world. Our team of experts combines technical knowledge with creative thinking to deliver exceptional results.

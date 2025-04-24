@@ -1,4 +1,3 @@
-
 import { Code, Smartphone, Brain } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -39,7 +38,7 @@ export function ServicesSection() {
     <section id="services" className="krimson-section bg-background/50">
       <div className="krimson-container">
         <div className="text-center mb-16">
-          <h2 className="krimson-subheading mb-3">WHAT WE DO</h2>
+          <h2 className="krimson-subheading mb-3">WHAT I DO</h2>
           <h3 className="krimson-heading mb-6">Our Digital Services</h3>
           <p className="max-w-3xl mx-auto text-muted-foreground text-lg">
             We provide cutting-edge technology solutions to help businesses and individuals thrive in the digital era.

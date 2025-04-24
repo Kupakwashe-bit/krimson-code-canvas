@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { ServicesSection } from "@/components/ServicesSection";
@@ -7,6 +6,7 @@ import { AboutSection } from "@/components/AboutSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { VideoShowcase } from "@/components/VideoShowcase";
+import HobbiesSection from "@/components/HobbiesSection";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -69,11 +69,7 @@ const Index = () => {
         <ServicesSection />
         <ProjectsSection />
         <AboutSection />
-        <section className="krimson-section bg-muted/10">
-          <div className="krimson-container">
-            <VideoShowcase />
-          </div>
-        </section>
+        <HobbiesSection />
         <ContactSection />
       </main>
       

@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 
@@ -115,7 +114,7 @@ export function Footer() {
               © {currentYear} KRIMSON TECHNOLOGIES. All rights reserved.
             </p>
             <p className="text-muted-foreground mt-2 md:mt-0">
-              Designed with <span className="text-primary">♥</span> for the digital era
+              Designed by KupaDev
             </p>
           </div>
         </div>
